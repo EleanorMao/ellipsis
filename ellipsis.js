@@ -1,6 +1,6 @@
 function ellipsis(selector, innerSelector){
-    var doms = Array.prototype.slice.call(document.querySelectorAll(selector), 0);
-    doms.map(function(item){
+    var doms = document.querySelectorAll(selector);
+    doms.forEach(function(item){
       let outerHeight = item.offsetHeight;
       let innerText = item.querySelector(innerSelector);
       if(!innerText) return;
